@@ -1,0 +1,1229 @@
+--html--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Adventure Travel | plan to next</title>
+  <link rel="stylesheet" href="travelling.css">
+  <link href="https://cdn.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css"> 
+  <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.js"></script>
+</head>
+
+</head>
+
+<body>
+
+<input type="checkbox" id="bars">
+  <nav class="nav-bar" id="navbar">
+    <div class="content">
+      <div class="site-logo">
+        <a href="#" class="logo-link">Adventure Travel</a>
+      </div>
+
+      <ul class="navigation">
+        <li class="link"><a href="#home">home</a></li>
+        <li class="link"><a href="#about">about us</a></li>
+        <li class="link"><a href="#next">next</a></li>
+        <li class="link"><a href="#blog">blog</a></li>
+        <li class="link"><a href="#gallery">gallery</a></li>
+        <li class="link"><a href="#contact">contact</a></li>
+
+      </ul>
+
+      <label for='bars' class="icon-bars"><i class="ri-bar-chart-2-fill"></i></label>
+    </div>
+  </nav>
+
+  <header class="home" id="home">
+    <div class="content">
+      <h1>The <strong>best</strong> way to <strong>plan your next</strong> adventure trip</h1>
+      <h4> <i>Explore the colourful world like never seen </i></h4>
+      <button class="btn-explore">Explore more <i class="ri-arrow-right-line"></i> </button>
+    </div>
+  </header>
+
+
+  <section class="about" id="about">
+    <div class="content">
+      <div class="items">
+
+        <div class="image">
+          <img src="image/lo.jpg" alt="" srcset="">
+        </div>
+        <div class="item">
+          <div class="item-content">
+            <h2 class="about-title">
+              About Us
+            </h2>
+            <div class="about-desc">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis laudantium maxime sunt ex quia,
+                nulla qui officia modi provident consequatur!
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis in vitae laudantium!
+              </p>
+            </div>
+          </div>
+
+          <div class="item-data">
+            <div class="col">
+              <h1>387</h1>
+              <span>completed trips</span>
+            </div>
+            <div class="col">
+              <h1>71</h1>
+              <span>Tour Guides</span>
+            </div>
+            <div class="col">
+              <h1>46</h1>
+              <span>Destinations</span>
+            </div>
+
+          </div>
+
+          <button class="btn-explore">Explore more <i class="ri-arrow-right-line"></i> </button>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="next" id="next">
+    <div class="heading">
+      <h1 class="title">discover the most attracative destinations</h1>
+      <p class="subtitle">Let's see the world with your passion</p>
+    </div>
+    <div class="content">
+      <div class="items">
+
+        <div class="card">
+          <div class="image">
+            <img src="image/main-qimg-3d8b66bce83e7778b76790dfc583eacf-lq.jpeg" alt="" srcset="">
+          </div>
+          <div class="content-card">
+            <h4> <small>Hallstatt,Austria</small></h4>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam blanditiis odit culpa?
+            </p>
+            <button class="btn-read">read More</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="image/image.jpg" alt="" srcset="">
+          </div>
+          <div class="content-card">
+            <h4>Paris</h4>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam blanditiis odit culpa?
+            </p>
+            <button class="btn-read">read More</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img src="image/20200107_01_07_s.jpg"" srcset="">
+          </div>
+          <div class="content-card">
+            <h4>Japan City</h4>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam blanditiis odit culpa?
+            </p>
+            <button class="btn-read">read More</button>
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="blog" id="blog">
+    <div class="heading">
+      <h1 class="title">Latest on our blog</h1>
+      <p class="subtitle">That's help you to travel better than other!</p>
+    </div>
+    <div class="content">
+      <div class="items">
+        <div class="card">
+          <img src="image/solitary-figure-amidst-vast-foggy-landscape.jpg" alt="" srcset="">
+          <div class="content-card">
+            <p>
+              Five Thing You neeed to know about dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="image/img_5218.webp" alt="" srcset="">
+          <div class="content-card">
+            <p>
+              Five Thing You neeed to know about dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="image/205572240-yoga-in-a-morning-forest-woman-in-a-tree-pose.jpg" alt="" srcset="">
+          <div class="content-card">
+            <p>
+              Five Thing You neeed to know about dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <div class="site-banner">
+    <div class="content">
+      <div class="row">
+        <p><small>Adventure <small>&</small> Travel </small></p>
+      </div>
+    </div>
+
+  </div>
+
+  <section class="gallery" id="gallery">
+    <div class="heading">
+      <h1 class="title">Our Album </h1>
+      <p class="subtitle">We have best Photographers wait you for take your personnel pictures with all Places!</p>
+    </div>
+    <div class="items">
+
+      <div class="card">
+        <img src="image/188356_188346_cover_photo-AGS-5128.avif" alt="" srcset="">
+      </div>
+      <div class="card">
+        <img src="image/Singapore.jpg" alt="" srcset="">
+      </div>
+      <div class="card">
+        <img src="image/cheerful-brunette-blonde-female-travelers-260nw-1383106268.webp" alt="" srcset="">
+      </div>
+      <div class="card">
+        <img src="image/shutterstock_1904889901.jpg" alt="" srcset="">
+      </div>
+      <div class="card">
+        <img src="image/f8c8e3b6-9669-4cda-89b7-0b023c52fcaa.tmp" alt="" srcset="">
+      </div>
+      <div class="card">
+        <img src="image/9ae1c4b2-city-21033-16374d0645f.jpg" alt="" srcset="">
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="contact" id="contact">
+
+    <div class="content">
+      <div class="items">
+
+        <div class="item">
+          <div class="heading">
+            <h1 class="title">Contact our travel agancy</h1>
+            <div class="subtitle">We are able to replay within 24 hours. we work in weeekend also </div>
+          </div>
+          <div class="row">
+            <div class="card">
+              <div class="line">
+                <span><i class="ri-phone-line"></i></span>
+                <h4>Call us</h4>
+              </div>
+
+              <p>+91 8802945864</p>
+            </div>
+            <div class="card">
+              <div class="line">
+                <span><i class="ri-mail-line"></i></span>
+                <h4>Mail us</h4>
+              </div>
+              <p>hasimali8682@gmail.com</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <form action="" method="post">
+            <input type="mail" class="input" placeholder="Your Email">
+            <input type="text" class="input" placeholder="Your Phone">
+            <textarea rows="6" class="input" placeholder="Your Message"></textarea>
+            <button class="btn-contact">send a message ! </button>
+          </form>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+
+    <div class="content">
+      <h4>Hasim-Travel</h4>
+      <div class="social">
+        <span>
+          <a href="#f"><i class="ri-facebook-fill"></i></a>
+        </span>
+        <span>
+          <a href="#f"><i class="ri-instagram-fill"></i></a>
+        </span>
+        <span>
+          <a href="#f"><i class="ri-twitter-fill"></i></a>
+        </span>
+        <span>
+          <a href="#f"><i class="ri-linkedin-fill"></i></a>
+        </span>
+        <span>
+          <a href="#f"><i class="ri-youtube-fill"></i></a>
+        </span>
+      </div>
+      <p>
+        <i class="ri-double-quotes-l"></i>
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos reiciendis at ullam beatae temporibus officia
+        quibusdam facilis dolorum non quo earum omnis soluta quas
+        <i class="ri-double-quotes-r"></i>
+
+      </p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, nulla soluta.</p>
+      <ul class="navigation">
+        <li class="link"><a href="#home">home</a></li>
+        <li class="link"><a href="#about">about us</a></li>
+        <li class="link"><a href="#next">next</a></li>
+        <li class="link"><a href="#blog">blog</a></li>
+        <li class="link"><a href="#gallery">gallery</a></li>
+        <li class="link"><a href="#contact">contact</a></li>
+
+      </ul>
+    </div>
+    <div class="rights">
+      Copyrights &#169 <a href="http://" target="_blank" rel="noopener noreferrer">Idoss Technologies</a>. all rights reserved
+    </div>
+  </footer>
+  <script src="travelling.js"></script>
+
+</body>
+
+</html>
+
+-css--
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+
+:root {
+    --primary-color: #021235;
+    --primary-light: #353f5b;
+    --orange-color: #f35405;
+
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #021235;
+    color: #eee;
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: 1px 1px 2px #353f5b;
+}
+
+.nav-bar.active {
+
+    background-color: var(--primary-color);
+    box-shadow: 1px 1px 2px #a0b3e5;
+
+}
+
+.content {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1.6rem 1rem;
+}
+
+.nav-bar .content {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1.6rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-bar .site-logo {
+    padding: 0.5rem;
+}
+
+.nav-bar .site-logo .logo-link {
+    padding: 0.25rem;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 22px;
+    text-transform: capitalize;
+    color: #fff;
+    border-top: 4px solid #f35405;
+}
+
+.nav-bar .navigation {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.nav-bar .navigation .link a {
+    padding: 0.25rem 0.5rem;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #fff;
+    border-top: 1px solid transparent;
+    transition: all 0.6s;
+}
+
+.nav-bar .navigation .link:hover a {
+    color: #f35405;
+    border-top: 1px solid #f35405;
+}
+
+
+.home {
+    background: linear-gradient(to top, #021235, #021235bb), url(image/istockphoto-1443409611-170667a.webp);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.home .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.home .content h1 {
+    font-size: 56px;
+    line-height: 68px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 500;
+    background-image: url(image/depositphotos_205896374-stock-photo-image-view-airplane-window-see.jpg);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 1px #fff;
+    max-width: 450px;
+}
+
+.home .content h4 {
+    font-size: 26px;
+    line-height: 26px;
+    font-weight: 300;
+    color: #fff;
+}
+
+
+.btn-explore {
+    width: fit-content;
+    background-color: #f35405cc;
+    padding: 0.9rem 2.4rem;
+    padding-left: 1rem;
+    font-size: 16px;
+    line-height: 16px;
+    color: #eee;
+    border: 2px solid #f35405cc;
+    margin-top: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 1s;
+}
+
+.btn-explore:hover {
+    border: 2px solid #f35405;
+    background-color: #f35405;
+    padding-left: 2rem;
+
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+section .content {
+    width: 100%;
+    max-width: 1300px;
+}
+
+section .heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 2rem 0rem;
+}
+
+section .heading .title {
+    text-transform: capitalize;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    color: #fff;
+    text-align: center;
+
+}
+
+section .heading .subtitle {
+    font-size: 20px;
+    font-weight: 300;
+    color: #eee;
+}
+
+.about .items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    width: 100%;
+}
+
+.about .items .item,
+.about .items .image {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about .items .image {
+    padding: 2rem;
+    padding-left: 0rem;
+}
+
+.about .items .image img {
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
+}
+
+.about .item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about .items .item .about-title {
+    font-size: 46px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.about .items .item .about-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about .items .item .about-desc p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #eee;
+}
+
+
+.about .item-data {
+    width: 100%;
+    padding: 2rem 0rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.about .item-data .col {
+    width: 100%;
+    padding: 2rem 1rem;
+    background-color: #ffffff44;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-top: 6px solid #000;
+
+    cursor: pointer;
+
+}
+
+.about .item-data .col:hover {
+
+    background-color: #00000077;
+    border-top: 6px solid #fff;
+
+}
+
+.about .item-data .col h1 {
+    text-align: center;
+    font-size: 40px;
+
+}
+
+.about .item-data .col span {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
+.next {
+    background-color: var(--primary-color);
+
+}
+
+.next .items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 4rem;
+    padding: 0rem 1rem;
+}
+
+.next .items .card {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    max-width: 350px;
+}
+
+.next .items .card .image {
+    width: 100%;
+    height: 340px;
+    overflow: hidden;
+    background: linear-gradient(to top, #000, transparent);
+    position: relative;
+
+}
+
+.next .items .card .image::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 60%;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(to top, var(--primary-color) 5%, transparent);
+}
+
+.next .items .card .image img {
+    width: 100%;
+    min-height: 100%;
+    height: fit-content;
+    object-fit: cover;
+}
+
+.next .card .content-card {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0rem 1rem;
+    transform: translateY(-20px);
+    color: #fff;
+    z-index: 100;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+
+.next .card .content-card h4 {
+    font-size: 42px;
+    font-family: 'Roboto';
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+.next .card .content-card p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #eee;
+}
+
+.next .card .content-card .btn-read {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 300;
+    color: #eee;
+    padding: 0.8rem 2.4rem;
+    width: fit-content;
+    background-color: transparent;
+    border: 1.6px solid #eee;
+    cursor: pointer;
+    transition: all 1s ease-in;
+    margin-top: 1rem;
+}
+
+.next .card .content-card .btn-read:hover {
+    padding-left: 3rem;
+    color: #fff;
+    border: 1.6px solid #fff;
+
+}
+
+.blog {
+    background-color: #010101;
+
+}
+
+.blog .items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 0rem 1rem;
+}
+
+.blog .items .card {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.blog .items .card::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(to top, #010101, transparent);
+    z-index: 0;
+}
+
+.blog .items .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s;
+}
+
+.blog .items .card:hover img {
+    transform: scale(1.1);
+
+}
+
+.blog .items .card .content-card {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transform: translateY(20px);
+    transition: all 1s;
+
+
+}
+
+.blog .items .card:hover .content-card {
+    position: absolute;
+    transform: translateY(-30px);
+
+}
+
+.blog .items .card p {
+    padding: 1rem 1rem;
+    font-size: 16px;
+    color: #fff;
+}
+
+.site-banner {
+    background-color: #000;
+    padding: 2rem 0rem;
+}
+
+.site-banner .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.site-banner .row p {
+    font-weight: 800;
+    font-size: 200px;
+    background-image: url(image/depositphotos_205896374-stock-photo-image-view-airplane-window-see.jpg);
+    background-position: top center;
+    background-attachment: fixed;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: #010101;
+    -webkit-text-fill-color: transparent;
+}
+
+.site-banner .row small {
+    font-family: 600;
+    font-size: 80px;
+}
+
+
+.gallery {
+    background-color: var(--primary-color);
+}
+
+.gallery .items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    padding: 0rem 1rem;
+    position: relative;
+    overflow: hidden;
+    max-height: 450px;
+    overflow: hidden;
+    padding: 1rem 0rem;
+}
+
+
+.gallery .items .card {
+    grid-column: span 1;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.gallery .items .card::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(to top, #010101, transparent);
+    z-index: 0;
+}
+
+.gallery .items .card:hover {
+    grid-column: span 2;
+
+}
+
+.gallery .items .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s;
+}
+
+.contact {
+    background-color: #010101;
+}
+
+.contact .items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.contact .item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact .item .heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact .item .heading .title,
+.contact .heading .subtitle {
+    text-align: start;
+    max-width: 80%;
+}
+
+.contact .item form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 1rem;
+    background-color: #00040b;
+}
+
+.contact .item .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+}
+
+.contact .item .row .card {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid #eee;
+    border-top: 2px solid #fff;
+    border-bottom: 8px solid transparent;
+    transition: all 0.9s;
+    cursor: pointer;
+}
+
+.contact .item .row .card:hover {
+    background-color: #a0b3e511;
+    border-bottom: 8px solid #f35405;
+
+}
+
+.contact .item .card .line {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+
+}
+
+.contact .item .card i {
+    font-size: 80px;
+}
+
+.contact .item .card h4 {
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #f35405;
+
+}
+
+.contact .item .card p {
+    width: 90%;
+    font-size: 16px;
+    font-weight: 300;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #fff;
+    height: 30px;
+    display: flex;
+    align-items: flex-start;
+    transition: align-items 1s;
+}
+
+.contact .item .card:hover p {
+    border-bottom: 1px solid transparent;
+    display: flex;
+    align-items: flex-end;
+}
+
+.contact .item form .input {
+    padding: 1.6rem 1rem;
+    background-color: #a0b3e511;
+    border: none;
+    border-bottom: 2px solid #a0b3e5;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+.contact .item form .btn-contact {
+    padding: 1.6rem 0.5rem;
+    background-color: #f3540577;
+    border: none;
+    border-bottom: 2px solid #f35405;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.contact .item form .btn-contact:hover {
+    background-color: #f35405;
+}
+
+footer {
+    color: #fff;
+}
+
+footer .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    color: #fff;
+}
+
+footer .content h4 {
+    width: 100%;
+    text-align: center;
+    font-size: 46px;
+    line-height: 46px;
+}
+
+footer .content .social {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1.6rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
+}
+
+footer .content .social a i {
+    font-size: 24px;
+    color: #fff;
+}
+
+footer .content .social a:hover i {
+    font-size: 24px;
+    color: #f35405;
+}
+
+footer .content p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+footer .content p i {
+    font-size: 36px;
+    color: #ffffff44;
+    padding-bottom: 2rem;
+
+}
+
+footer .content .navigation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    list-style: none;
+}
+
+footer .content .navigation .link {
+    padding: 3px 0px;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+
+}
+
+footer .content .navigation .link a {
+    font-size: 18px;
+    color: #fff;
+    text-transform: lowercase;
+    font-weight: 300;
+}
+
+footer .content .navigation .link:hover {
+    border-bottom: 1px solid #eee;
+}
+
+footer .rights {
+    width: 100%;
+    border-top: 1px solid #eeeeee77;
+    padding: 1rem;
+    text-align: center;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 300;
+    color: #ffffffcc;
+
+}
+
+footer .rights a {
+    color: #ffffff;
+    font-weight: 400;
+
+}
+
+.icon-bars,#bars {
+    display: none;
+}
+
+@media (max-width:700px) {
+    .icon-bars {
+        display: flex;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        transform: rotate(90deg);
+    }
+
+    .icon-bars i {
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .nav-bar .navigation {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background-color: #000;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.4rem;
+        transition: all 2s;
+    }
+   #bars:checked~.nav-bar .navigation {
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+
+    .site-banner .row p {
+        font-size: 50px;
+
+    }
+
+    .site-banner .row small {
+        font-size: 20px;
+
+    }
+
+
+}
+--js--
+const navbar = document.getElementById('navbar');
+window.onscroll = function () {
+    scrollFunction()
+}
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        navbar.classList.add('active')
+    } else {
+        navbar.classList.remove('active')
+
+    }
+}
+
+
+const scrollrevealOption = {
+    distance: '50px',
+    origin: 'bottom',
+    duration: 1500,
+}
+
+ScrollReveal().reveal('.home h1',scrollrevealOption)
+ScrollReveal().reveal('.home h4',{
+    ...scrollrevealOption,
+    delay:800,
+})
+ScrollReveal().reveal('.home .btn-explore',{
+    ...scrollrevealOption,
+    delay:1200,
+})
+
+ScrollReveal().reveal('.about .about-title',scrollrevealOption)
+ScrollReveal().reveal('.about .about-desc',{
+    ...scrollrevealOption,
+    delay:600,
+})
+ScrollReveal().reveal('.about .item-data',{
+    ...scrollrevealOption,
+    delay:1200,
+})
+ScrollReveal().reveal('.btn-explore',{
+    ...scrollrevealOption,
+    delay:2000,
+})
+ScrollReveal().reveal('.btn-more',{
+    ...scrollrevealOption,
+    delay:2000,
+})
+ScrollReveal().reveal('.card',scrollrevealOption)
+
+ScrollReveal().reveal('.card .image',{
+    ...scrollrevealOption,
+    delay:600,
+})
+ScrollReveal().reveal('.card .content-card h4',{
+    ...scrollrevealOption,
+    delay:1600,
+})
+ScrollReveal().reveal('.next .card .content-card  p',{
+    ...scrollrevealOption,
+    delay:2000,
+})
+
+
+
+ScrollReveal().reveal('.next .card .content-card p',{
+    ...scrollrevealOption,
+    delay:600,
+})
+
+
+ScrollReveal().reveal('form .input',scrollrevealOption)
+ScrollReveal().reveal('row .card',scrollrevealOption)
