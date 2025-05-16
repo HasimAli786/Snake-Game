@@ -1,0 +1,118 @@
+import java.util.*;
+import java.util.concurrent.*;
+
+class Question {
+    private String question;
+    private String[] options;
+    private int correctAnswer;
+
+    public Question(String question, String[] options, int correctAnswer) {
+        this.question = question;
+        this.options = options;
+        this.correctAnswer = correctAnswer;
+    }
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public String[] getOptions() {
+        return options;
+    }
+
+    public int getCorrectAnswer() {
+        return correctAnswer;
+    }
+}
+
+class Quiz {
+    private List<Question> questions;
+    private int score;
+    private List<Boolean> results; // To track correct and incorrect answers
+    private final int TIME_LIMIT = 30; // Time limit per question in seconds
+
+    public Quiz(List<Question> questions) {
+        this.questions = questions;
+        this.score = 0;
+        this.results = new ArrayList<>();
+    }
+
+    public void startQuiz() {
+        Scanner scanner = new Scanner(System.in);
+        ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
+        int questionNumber = 1;
+
+        for (Question question : questions) {
+            System.out.println("Question " + questionNumber + ": " + question.getQuestion());
+            String[] options = question.getOptions();
+            for (int i = 0; i < options.length; i++) {
+                System.out.println((i + 1) + ". " + options[i]);
+            }
+
+            Future<Integer> future = executor.submit(new Callable<Integer>() {
+                @Override
+                public Integer call() {
+                    System.out.print("Enter your answer (1-4): ");
+                    while (!scanner.hasNextInt()) {
+                        System.out.println("Invalid input. Please enter a number.");
+                        scanner.next();
+                    }
+                    return scanner.nextInt();
+                }
+            });
+
+            try {
+                int userAnswer = future.get(TIME_LIMIT, TimeUnit.SECONDS);
+                if (userAnswer >= 1 && userAnswer <= 4) {
+                    if (userAnswer - 1 == question.getCorrectAnswer()) {
+                        score++;
+                        results.add(true);
+                        System.out.println("Correct!");
+                    } else {
+                        results.add(false);
+                        System.out.println("Incorrect! The correct answer was: " + (question.getCorrectAnswer() + 1) + ". " + options[question.getCorrectAnswer()]);
+                    }
+                } else {
+                    results.add(false);
+                    System.out.println("Invalid choice. Please select a number between 1 and 4.");
+                }
+            } catch (TimeoutException e) {
+                future.cancel(true);
+                results.add(false);
+                System.out.println("Time's up! Moving to the next question.");
+            } catch (Exception e) {
+                results.add(false);
+                System.out.println("An error occurred. Moving to the next question.");
+            }
+            questionNumber++;
+        }
+
+        executor.shutdown();
+        displayResult();
+        scanner.close();
+    }
+
+    private void displayResult() {
+        System.out.println("\nQuiz Over!");
+        System.out.println("Your final score is: " + score + " out of " + questions.size());
+        for (int i = 0; i < questions.size(); i++) {
+            Question question = questions.get(i);
+            System.out.println("Q" + (i + 1) + ": " + question.getQuestion());
+            System.out.println("Correct answer: " + (question.getCorrectAnswer() + 1) + ". " + question.getOptions()[question.getCorrectAnswer()]);
+            System.out.println("Your answer was: " + (results.get(i) ? "Correct" : "Incorrect"));
+        }
+    }
+}
+
+public class QuizApp {
+    public static void main(String[] args) {
+        List<Question> questions = new ArrayList<>();
+        questions.add(new Question("What is the capital of France?", new String[]{"Berlin", "London", "Paris", "Madrid"}, 2));
+        questions.add(new Question("Which planet is known as the Red Planet?", new String[]{"Earth", "Mars", "Jupiter", "Saturn"}, 1));
+        questions.add(new Question("Who wrote 'To Kill a Mockingbird'?", new String[]{"Harper Lee", "Mark Twain", "Ernest Hemingway", "F. Scott Fitzgerald"}, 0));
+        questions.add(new Question("What is the largest ocean on Earth?", new String[]{"Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"}, 3));
+
+        Quiz quiz = new Quiz(questions);
+        quiz.startQuiz();
+    }
+}
