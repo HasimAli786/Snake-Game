@@ -1,0 +1,159 @@
+import tkinter as tk
+from tkinter import messagebox
+import sqlite3
+
+
+# Database setup
+def setup_database():
+    conn = sqlite3.connect('library.db')
+    cursor = conn.cursor()
+    cursor.execute('''CREATE TABLE IF NOT EXISTS books (
+                        id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        title TEXT NOT NULL,
+                        author TEXT NOT NULL,
+                        year INTEGER NOT NULL,
+                        isbn TEXT NOT NULL UNIQUE
+                      )''')
+    conn.commit()
+    conn.close()
+
+
+# Functions for database operations
+def add_book():
+    title = entry_title.get()
+    author = entry_author.get()
+    year = entry_year.get()
+    isbn = entry_isbn.get()
+
+    if not (title and author and year and isbn):
+        messagebox.showwarning("Warning", "All fields are required!")
+        return
+
+    try:
+        conn = sqlite3.connect('library.db')
+        cursor = conn.cursor()
+        cursor.execute("INSERT INTO books (title, author, year, isbn) VALUES (?, ?, ?, ?)",
+                       (title, author, int(year), isbn))
+        conn.commit()
+        conn.close()
+        messagebox.showinfo("Success", "Book added successfully!")
+        clear_fields()
+        view_all_books()
+    except sqlite3.IntegrityError:
+        messagebox.showerror("Error", "ISBN already exists!")
+    except ValueError:
+        messagebox.showerror("Error", "Year must be a number!")
+
+
+def view_all_books():
+    conn = sqlite3.connect('library.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM books")
+    rows = cursor.fetchall()
+    conn.close()
+    listbox_books.delete(0, tk.END)
+    for row in rows:
+        listbox_books.insert(tk.END, f"ID: {row[0]} | Title: {row[1]} | Author: {row[2]} | Year: {row[3]} | ISBN: {row[4]}")
+
+
+def search_books():
+    query = entry_search.get()
+    if not query:
+        messagebox.showwarning("Warning", "Enter a search query!")
+        return
+
+    conn = sqlite3.connect('library.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM books WHERE title LIKE ? OR author LIKE ?", (f"%{query}%", f"%{query}%"))
+    rows = cursor.fetchall()
+    conn.close()
+
+    listbox_books.delete(0, tk.END)
+    if rows:
+        for row in rows:
+            listbox_books.insert(tk.END, f"ID: {row[0]} | Title: {row[1]} | Author: {row[2]} | Year: {row[3]} | ISBN: {row[4]}")
+    else:
+        listbox_books.insert(tk.END, "No books found!")
+
+
+def delete_book():
+    try:
+        selected_item = listbox_books.get(listbox_books.curselection())
+        book_id = int(selected_item.split("|")[0].split(":")[1].strip())
+        conn = sqlite3.connect('library.db')
+        cursor = conn.cursor()
+        cursor.execute("DELETE FROM books WHERE id = ?", (book_id,))
+        conn.commit()
+        conn.close()
+        messagebox.showinfo("Success", "Book deleted successfully!")
+        view_all_books()
+    except IndexError:
+        messagebox.showwarning("Warning", "Select a book to delete!")
+
+
+def clear_fields():
+    entry_title.delete(0, tk.END)
+    entry_author.delete(0, tk.END)
+    entry_year.delete(0, tk.END)
+    entry_isbn.delete(0, tk.END)
+    entry_search.delete(0, tk.END)
+
+
+# GUI setup
+def setup_gui():
+    window = tk.Tk()
+    window.title("Library Management System")
+    window.geometry("700x500")
+    window.configure(bg="#f4f4f9")
+
+    # Title Label
+    tk.Label(window, text="Library Management System", font=("Arial", 20, "bold"), bg="#f4f4f9", fg="#2c3e50").pack(pady=10)
+
+    # Book Details Frame
+    frame_details = tk.Frame(window, bg="#f4f4f9")
+    frame_details.pack(pady=10)
+
+    tk.Label(frame_details, text="Title:", font=("Arial", 12), bg="#f4f4f9").grid(row=0, column=0, padx=5, pady=5)
+    tk.Label(frame_details, text="Author:", font=("Arial", 12), bg="#f4f4f9").grid(row=1, column=0, padx=5, pady=5)
+    tk.Label(frame_details, text="Year:", font=("Arial", 12), bg="#f4f4f9").grid(row=0, column=2, padx=5, pady=5)
+    tk.Label(frame_details, text="ISBN:", font=("Arial", 12), bg="#f4f4f9").grid(row=1, column=2, padx=5, pady=5)
+
+    global entry_title, entry_author, entry_year, entry_isbn, entry_search, listbox_books
+    entry_title = tk.Entry(frame_details, font=("Arial", 12))
+    entry_author = tk.Entry(frame_details, font=("Arial", 12))
+    entry_year = tk.Entry(frame_details, font=("Arial", 12))
+    entry_isbn = tk.Entry(frame_details, font=("Arial", 12))
+
+    entry_title.grid(row=0, column=1, padx=5, pady=5)
+    entry_author.grid(row=1, column=1, padx=5, pady=5)
+    entry_year.grid(row=0, column=3, padx=5, pady=5)
+    entry_isbn.grid(row=1, column=3, padx=5, pady=5)
+
+    # Buttons
+    frame_buttons = tk.Frame(window, bg="#f4f4f9")
+    frame_buttons.pack(pady=10)
+
+    tk.Button(frame_buttons, text="Add Book", command=add_book, bg="#2ecc71", fg="white", font=("Arial", 12), width=15).grid(row=0, column=0, padx=5, pady=5)
+    tk.Button(frame_buttons, text="View All Books", command=view_all_books, bg="#3498db", fg="white", font=("Arial", 12), width=15).grid(row=0, column=1, padx=5, pady=5)
+    tk.Button(frame_buttons, text="Delete Book", command=delete_book, bg="#e74c3c", fg="white", font=("Arial", 12), width=15).grid(row=0, column=2, padx=5, pady=5)
+    tk.Button(frame_buttons, text="Clear Fields", command=clear_fields, bg="#95a5a6", fg="white", font=("Arial", 12), width=15).grid(row=0, column=3, padx=5, pady=5)
+
+    # Search
+    tk.Label(window, text="Search Books:", font=("Arial", 12), bg="#f4f4f9").pack(pady=5)
+    entry_search = tk.Entry(window, font=("Arial", 12), width=40)
+    entry_search.pack(pady=5)
+    tk.Button(window, text="Search", command=search_books, bg="#9b59b6", fg="white", font=("Arial", 12), width=15).pack(pady=5)
+
+    # Book Listbox
+    listbox_books = tk.Listbox(window, font=("Arial", 12), width=80, height=10)
+    listbox_books.pack(pady=10)
+
+    # Initialize
+    view_all_books()
+    window.mainloop()
+
+
+# Run the application
+if __name__ == "__main__":
+    setup_database()
+    setup_gui()
