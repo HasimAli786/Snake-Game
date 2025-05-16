@@ -1,0 +1,60 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class NumberGuessingGame {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+        int rounds = 0;
+        int totalAttempts = 0;
+        boolean playAgain = true;
+
+        System.out.println("Welcome to the Number Guessing Game!");
+
+        while (playAgain) {
+            rounds++;
+            int generatedNumber = random.nextInt(100) + 1;
+            int attempts = 0;
+            int maxAttempts = 10;
+            boolean guessedCorrectly = false;
+
+            System.out.println("\nRound " + rounds + ":");
+            System.out.println("I have generated a number between 1 and 100. Can you guess it?");
+
+            while (attempts < maxAttempts && !guessedCorrectly) {
+                System.out.print("Attempt " + (attempts + 1) + "/" + maxAttempts + ": Enter your guess: ");
+                int guess = scanner.nextInt();
+                attempts++;
+
+                if (guess < generatedNumber) {
+                    System.out.println("Too low!");
+                } else if (guess > generatedNumber) {
+                    System.out.println("Too high!");
+                } else {
+                    System.out.println("Congratulations! You guessed the correct number " + generatedNumber + " in " + attempts + " attempts.");
+                    totalAttempts += attempts;
+                    guessedCorrectly = true;
+                }
+            }
+
+            if (!guessedCorrectly) {
+                System.out.println("Sorry, you've used all " + maxAttempts + " attempts. The correct number was " + generatedNumber + ".");
+            }
+
+            System.out.print("Do you want to play another round? (yes/no): ");
+            String response = scanner.next().trim().toLowerCase();
+            if (!response.equals("yes")) {
+                playAgain = false;
+            }
+        }
+
+        System.out.println("\nGame Over!");
+        System.out.println("Total rounds played: " + rounds);
+        System.out.println("Total attempts made: " + totalAttempts);
+        double averageAttempts = rounds > 0 ? (double) totalAttempts / rounds : 0;
+        System.out.println("Average attempts per round: " + String.format("%.2f", averageAttempts));
+        
+        scanner.close();
+    }
+}
